@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { wrapper } from '../src/redux/store';
+
+import 'antd/dist/antd.css';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Component {...pageProps} />
+  );
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp);
